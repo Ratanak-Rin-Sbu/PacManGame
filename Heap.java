@@ -1,6 +1,3 @@
-// Name: Ratanak Rin
-// Email: ratanak.rin@stonybrook.edu
-
 public class Heap<E extends Comparable<E>> {
     protected E[] arr;
     protected int size;
@@ -30,7 +27,7 @@ public class Heap<E extends Comparable<E>> {
             arr = tmp;
         }
         
-        //TODO: append e to arr and call upheap
+        // append e to arr and call upheap
         arr[size++] = e;
         upheap(size - 1);
     }
@@ -38,7 +35,7 @@ public class Heap<E extends Comparable<E>> {
         if(size <= 0)
             throw new IndexOutOfBoundsException("Empty heap");
         
-        //TODO: remove arr[0] and call downheap
+        // remove arr[0] and call downheap
         E e = arr[0];
         arr[0] = arr[--size];
         downheap(0);
@@ -49,7 +46,7 @@ public class Heap<E extends Comparable<E>> {
     protected int right(int i)        { return 2 * i + 2; }
     protected void swap(int i, int j) { E tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp; }
     protected void upheap(int i) {
-        //TODO: implement upheap
+        // implement upheap
         int p = parent(i);
         if(i == 0 || arr[p].compareTo(arr[i]) <= 0)
             return;
@@ -57,7 +54,7 @@ public class Heap<E extends Comparable<E>> {
         upheap(p);
     }
     protected void downheap(int i) {
-        //TODO: implement downheap
+        // implement downheap
         int l = left(i);
         if(l >= size)
             return;
