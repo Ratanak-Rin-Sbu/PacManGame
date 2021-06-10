@@ -1,5 +1,3 @@
-// Name: Ratanak Rin
-// Email: ratanak.rin@stonybrook.edu
 
 public class Path {
     private int[][] dist;
@@ -29,7 +27,7 @@ public class Path {
         //Update dist array to find the shortest path, where
         //the distance between cells are weighted by cellDist
         //
-        //TODO: - Starting from the 'from' position,
+        //      - Starting from the 'from' position,
         //        update dist[y][x] for all y and x such that
         //        dist[y][x] = dist[p.y][p.x] + d, where
         //        p is the position dequeued from queue and
